@@ -5,18 +5,18 @@ import './App.css';
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.state = { apiResponse: ''};
+    this.state = { apiResponse: 'API Not Connected'};
   }
 
-  callAPI(){
-    fetch('http://scottsubuntuserver.com/api')
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }))
-  }
+  // callAPI(){
+  //   fetch('http://scottsubuntuserver.com/api')
+  //     .then(res => res.text())
+  //     .then(res => this.setState({ apiResponse: res }))
+  // }
 
-  componentDidMount(){
-    this.callAPI();
-  }
+  // componentDidMount(){
+  //   this.callAPI();
+  // }
 
   render(){
     return (
