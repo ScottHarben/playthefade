@@ -5,11 +5,11 @@ import './App.css';
 class App extends React.Component{
   constructor(props){
     super(props);
-    this.state = { apiResponse: 'API Not Connected'};
+    this.state = { apiResponse: ''};
   }
 
   callAPI(){
-    fetch('http://scottsubuntuserver.com/api')
+    fetch('https://scottsubuntuserver.com/api')
       .then(res => res.text())
       .then(res => this.setState({ apiResponse: res }))
   }
