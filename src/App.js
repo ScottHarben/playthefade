@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+const axios = require('axios').default;
 
 class App extends React.Component{
   constructor(props){
@@ -8,11 +9,13 @@ class App extends React.Component{
     this.state = { apiResponse: ''};
   }
 
-  callAPI(){
-    fetch('https://scottsubuntuserver.com/api')
-      .then(res => res.text())
-      .then(res => this.setState({ apiResponse: res }))
+  async callAPI() {
+    //const response = await axios.get('http://localhost:9000/api');
+    const response = await axios.get('https://scottsubuntuserver.com/api');
+    const player = response.data[0]
+    this.setState({ apiResponse: player.FirstName + " " + player.LastName})
   }
+
 
   componentDidMount(){
     this.callAPI();
