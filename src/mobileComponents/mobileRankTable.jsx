@@ -8,7 +8,9 @@ const columns = MobileRankColumns();
 
 class MobileRankTable extends Component {
   state = {};
-
+  handleTournamentChange(tournaments) {
+    this.props.handleTournamentChange(tournaments);
+  }
   render() {
     const tournamentName =
       this.props.players.length === 0
