@@ -75,8 +75,8 @@ class DashboardBody extends Component {
   }
 
   async callAPI() {
-    const rankingsURL = "http://localhost:9000/GetPlayerRankings";
-    const detailsURL = "http://localhost:9000/GetPlayerRankingDetails";
+    const rankingsURL = "http://scottsubuntuserver.com/GetPlayerRankings";
+    const detailsURL = "http://scottsubuntuserver.com/GetPlayerRankingDetails";
     const players = await axios.get(rankingsURL);
     const details = await axios.get(detailsURL);
     const defaultPlayer = players.data.filter((player) => {
