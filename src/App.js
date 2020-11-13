@@ -3,7 +3,6 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "fontsource-roboto";
 import Navbar from "./components/navbar";
-import Roster from "./components/roster";
 import DashboardBody from "./components/dashboardBody";
 import MobileBody from "./mobileComponents/mobileBody";
 

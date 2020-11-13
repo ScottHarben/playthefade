@@ -3,12 +3,12 @@ import DataTable from "react-data-table-component";
 import DetailColumns from "./detailColumns";
 import DetailListGroup from "./detailListGroup";
 import DetailListPending from "./detailListPending";
-import ButtonDraft from "./buttonDraft";
 
 class DetailTable extends Component {
   state = {
     height: "",
   };
+
   handleAddComparePlayer(comparePlayer) {
     this.props.handleAddComparePlayer(comparePlayer);
   }

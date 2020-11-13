@@ -9,7 +9,6 @@ import {
   Legend,
   Line,
 } from "recharts";
-import { ArrowRightIcon } from "@primer/octicons-react";
 
 class DetailLine extends Component {
   state = {};
