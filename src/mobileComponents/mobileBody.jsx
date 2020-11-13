@@ -18,6 +18,8 @@ class MobileBody extends Component {
       tournaments: tournaments,
     });
   }
+  // "http://localhost:9000/GetPlayerRankings";
+  // "http://localhost:9000/GetPlayerRankingDetails";
 
   async callAPI() {
     const players = await axios.get(
@@ -57,6 +59,7 @@ class MobileBody extends Component {
           players={players}
           details={details}
           tournaments={this.state.tournaments}
+          handleTournamentChange={this.handleTournamentChange}
         />
       </React.Fragment>
     );
