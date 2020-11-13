@@ -6,7 +6,7 @@ function DetailColumns(tournaments) {
     {
       name: "Date",
       selector: "StartDate",
-      cell: (item) => (item.StartDate == "12/31/69" ? "" : item.StartDate),
+      cell: (item) => (item.StartDate === "12/31/69" ? "" : item.StartDate),
       minWidth: "100px",
     },
     {

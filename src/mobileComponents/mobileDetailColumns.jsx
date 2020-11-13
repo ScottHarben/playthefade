@@ -1,11 +1,9 @@
-import React from "react";
-
 function MobileDetailColumns() {
   return [
     {
       name: "Start Date",
       selector: "StartDate",
-      cell: (item) => (item.StartDate == "12/31/69" ? "" : item.StartDate),
+      cell: (item) => (item.StartDate === "12/31/69" ? "" : item.StartDate),
       compact: true,
       minWidth: "25px",
     },
