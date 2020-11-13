@@ -20,9 +20,11 @@ class MobileBody extends Component {
   }
 
   async callAPI() {
-    const players = await axios.get("http://localhost:9000/GetPlayerRankings");
+    const players = await axios.get(
+      "https://scottsubuntuserver.com/GetPlayerRankings"
+    );
     const details = await axios.get(
-      "http://localhost:9000/GetPlayerRankingDetails"
+      "https://scottsubuntuserver.com/GetPlayerRankingDetails"
     );
     this.setState({
       players: players.data,
