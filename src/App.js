@@ -10,7 +10,6 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {/* Hello! */}
         <Navbar />
         <div id="Parent">
           <div className="container-fluid Content">
