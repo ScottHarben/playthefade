@@ -87,10 +87,7 @@ class Body extends Component {
       const searchPlayer = this.state.searchPlayer.toLowerCase();
       return playerFullName.search(searchPlayer) > -1;
     });
-    if (
-      this.state.sortBy === "StandardDeviation" ||
-      this.state.sortBy === "Slope"
-    ) {
+    if (this.state.sortBy === "StandardDeviation") {
       players.sort((a, b) =>
         a[this.state.sortBy] > b[this.state.sortBy] ? 1 : -1
       );
