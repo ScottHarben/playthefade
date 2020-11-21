@@ -5,8 +5,8 @@ class ModalPlayerBody extends Component {
   state = {};
   render() {
     return (
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item bg-light">
+      <ul className="list-group list-group-flush">
+        <li className="list-group-item bg-light">
           <div className="row">
             <div className="col-1 px-0"></div>
             <div className="col-2 px-0 text-center">
@@ -29,7 +29,10 @@ class ModalPlayerBody extends Component {
         </li>
         {this.props.activePlayerDetails.map((detail) => {
           return (
-            <li class="list-group-item">
+            <li
+              key={detail.DKPlayerID + "-" + detail.TournamentOrder}
+              className="list-group-item"
+            >
               <div className="row">
                 <div className="col-1 text-right px-0">
                   <small className="" style={{ fontSize: "10px" }}>

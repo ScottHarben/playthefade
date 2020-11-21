@@ -28,6 +28,7 @@ class Filters extends Component {
         <div className="btn-group btn-group-sm mb-3 FilterButtonGroupTournaments">
           {tournamentList.map((tournaments) => (
             <button
+              key={tournaments}
               className="btn FilterButton"
               onClick={() => this.handleTournamentsChange(tournaments)}
               style={{

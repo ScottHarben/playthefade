@@ -13,9 +13,9 @@ class List extends Component {
     const players = this.props.players === undefined ? [] : this.props.players;
     return (
       <>
-        <ul class="list-group list-group-flush">
+        <ul className="list-group list-group-flush">
           <li
-            class="list-group-item sticky-top shadow-sm bg-light"
+            className="list-group-item sticky-top shadow-sm bg-light"
             style={{ top: "56px" }}
           >
             <div className="row">
@@ -90,7 +90,8 @@ class List extends Component {
             });
             return (
               <li
-                class="list-group-item"
+                key={player.DKPlayerID}
+                className="list-group-item"
                 style={{ cursor: "pointer" }}
                 onClick={() => this.handlePlayerClick(player, details)}
               >

@@ -3,7 +3,7 @@ import React from "react";
 function Navbar() {
   return (
     <nav
-      class="navbar navbar-dark fixed-top"
+      className="navbar navbar-dark fixed-top"
       style={{ backgroundColor: "#232F34" }}
     >
       <a className="navbar-brand" href="https://playthefade.com">

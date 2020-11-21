@@ -61,7 +61,7 @@ class Header extends Component {
               <Icon icon={"filter"} /> Filters
             </button>
             <div className="pr-2 flex-grow-1">
-              <div class="input-group">
+              <div className="input-group">
                 <input
                   type="text"
                   className="form-control SearchBar shadow-none"
