@@ -6,7 +6,7 @@ function Navbar() {
       class="navbar navbar-dark fixed-top"
       style={{ backgroundColor: "#232F34" }}
     >
-      <a class="navbar-brand" href="#">
+      <a className="navbar-brand" href="https://playthefade.com">
         <img
           src={require("../content/images/logo.png")}
           width="90"

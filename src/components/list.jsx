@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Icon from "./icon";
 class List extends Component {
   state = {};
   handleSortByChange(sortBy) {
