@@ -2,51 +2,41 @@
   font-family: Roboto, sans-serif;
 }
 
-#Parent {
-  margin-top: 56px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+.SearchBar {
+  width: 100%;
 }
 
-#NavColor {
+.FilterButton {
+  min-width: none;
 }
 
-.Content {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
+.FilterButtonGroupTournaments {
+  width: 100%;
 }
 
-#DashboardBody {
-  display: block;
-  padding-bottom: 15px;
+.FilterButtonGroupYesNo {
+  width: 33.33%;
 }
 
-#MobileBody {
-  display: none;
-  margin-top: 15px;
+.SortBy {
+  cursor: pointer;
 }
 
-.ContentPadding {
-  padding: 15px;
-}
-
-.Col {
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-@media only screen and (max-width: 768px) {
-  #MobileBody {
-    display: block;
+@media only screen and (min-width: 768px) {
+  .SearchBar {
+    max-width: 220px;
+    margin-left: auto;
   }
 
-  #DashboardBody {
-    display: none;
+  .FilterButton {
+    min-width: 55px;
+  }
+
+  .FilterButtonGroupTournaments {
+    width: auto;
+  }
+
+  .FilterButtonGroupYesNo {
+    width: auto;
   }
 }
