@@ -88,7 +88,7 @@ class List extends Component {
           </li>
           {players.map((player) => {
             let trendArrow = <React.Fragment />;
-            if (player != undefined) {
+            if (player !== undefined) {
               if (player.Rsquared < 0) {
                 trendArrow = (
                   <span className="text-muted">
@@ -138,15 +138,7 @@ class List extends Component {
               volBack = "0%";
             }
             const salary = player.Salary.toString();
-            const cutStreak =
-              player.IncludesMissedCut === 0 &&
-              player.FinishPointsAdjusted === 0 ? (
-                <span style={{ color: "#F9AA33" }}>
-                  <Icon icon={"zap"} />
-                </span>
-              ) : (
-                <React.Fragment />
-              );
+
             const details = this.props.details.filter((detail) => {
               return detail.DKPlayerID === player.DKPlayerID;
             });
