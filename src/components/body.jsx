@@ -47,10 +47,10 @@ class Body extends Component {
   }
 
   async callAPI() {
-    // const rankingsURL = "http://localhost:9000/GetPlayerRankings";
-    // const detailsURL = "http://localhost:9000/GetPlayerRankingDetails";
-    const rankingsURL = "https://scottsubuntuserver.com/GetPlayerRankings";
-    const detailsURL = "https://scottsubuntuserver.com/GetPlayerRankingDetails";
+    const rankingsURL = "http://localhost:9000/GetPlayerRankings";
+    const detailsURL = "http://localhost:9000/GetPlayerRankingDetails";
+    // const rankingsURL = "https://scottsubuntuserver.com/GetPlayerRankings";
+    // const detailsURL = "https://scottsubuntuserver.com/GetPlayerRankingDetails";
     const players = await axios.get(rankingsURL);
     const details = await axios.get(detailsURL);
     this.setState({

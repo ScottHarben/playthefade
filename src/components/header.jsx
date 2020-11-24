@@ -55,7 +55,8 @@ class Header extends Component {
           </div>
           <div className="mt-4 mb-3 d-flex flex-row-reverse">
             <button
-              className="btn btn-sm btn-outline-dark"
+              className="btn btn-sm btn-default"
+              style={{ borderColor: "#343a40" }}
               onClick={() => this.toggleFilters()}
             >
               <Icon icon={"filter"} /> Filters
