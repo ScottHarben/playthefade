@@ -7,6 +7,7 @@ import {
   XIcon,
   CheckIcon,
   ZapIcon,
+  InfoIcon,
 } from "@primer/octicons-react";
 
 function Icon({ icon }) {
@@ -25,6 +26,8 @@ function Icon({ icon }) {
       return <CheckIcon size={10} />;
     case "zap":
       return <ZapIcon size={10} verticalAlign="" />;
+    case "info":
+      return <InfoIcon size={16} />;
     default:
       return <div style={{ width: "16px" }}></div>;
   }

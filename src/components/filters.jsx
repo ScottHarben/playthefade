@@ -16,10 +16,9 @@ class Filters extends Component {
     const tournamentList = [1, 2, 3, 5, 10, 20];
     const filterHeaderTournaments =
       this.props.tournaments === 1 ? " tournament" : " tournaments";
-    const filterHeader =
-      "Include players with less than " +
-      this.props.tournaments +
-      filterHeaderTournaments;
+    const xTournaments = this.props.tournaments + filterHeaderTournaments;
+    const filterHeader = "Include players with less than " + xTournaments;
+
     return (
       <div className={this.props.filtersDisplay}>
         <div>
@@ -70,7 +69,9 @@ class Filters extends Component {
           </button>
         </div>
         <div>
-          <small>Include players with missed cuts</small>
+          <small>
+            Include players with a missed cut in the past {xTournaments}
+          </small>
         </div>
         <div className="btn-group btn-group-sm FilterButtonGroupYesNo">
           <button

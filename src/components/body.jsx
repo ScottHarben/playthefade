@@ -45,10 +45,13 @@ class Body extends Component {
   handleTournamentsChange(tournaments) {
     this.props.handleTournamentsChange(tournaments);
   }
+  handleMetricInfoClick() {
+    this.props.handleMetricInfoClick();
+  }
 
   async callAPI() {
     // const rankingsURL = "http://localhost:9000/GetPlayerRankings";
-    // const detailsURL = "http://localhost:9000/GetPlayerRankingDetails";
+    // const detailsURL = "http://localhost:9000/GetPlayerRankingDetailsk";
     const rankingsURL = "https://scottsubuntuserver.com/GetPlayerRankings";
     const detailsURL = "https://scottsubuntuserver.com/GetPlayerRankingDetails";
     const players = await axios.get(rankingsURL);
@@ -119,6 +122,7 @@ class Body extends Component {
           sortBy={this.state.sortBy}
           handleSortByChange={this.handleSortByChange}
           handlePlayerClick={this.props.handlePlayerClick}
+          handleMetricInfoClick={this.props.handleMetricInfoClick}
         />
       </React.Fragment>
     );
