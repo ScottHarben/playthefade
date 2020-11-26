@@ -74,7 +74,11 @@ class ModalMetricInfoBody extends Component {
         <p>
           <small>
             In{" "}
-            <a href="https://www.draftkings.com" target="_blank">
+            <a
+              href="https://www.draftkings.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               DraftKings
             </a>{" "}
             Fantasy Golf: Classic, teams are drafted by selecting 6 players
