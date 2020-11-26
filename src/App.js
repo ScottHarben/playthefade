@@ -6,6 +6,7 @@ import Navbar from "./components/navbar";
 import Body from "./components/body";
 import Modal from "react-bootstrap/Modal";
 import ModalPlayerBody from "./components/modalPlayerBody";
+import ModalMetricInfoBody from "./components/modalMetricInfoBody";
 import Icon from "./components/icon";
 
 class App extends React.Component {
@@ -13,8 +14,10 @@ class App extends React.Component {
     super(props);
     this.handlePlayerClick = this.handlePlayerClick.bind(this);
     this.handleTournamentsChange = this.handleTournamentsChange.bind(this);
+    this.handleMetricInfoClick = this.handleMetricInfoClick.bind(this);
     this.state = {
-      modalOpen: false,
+      modalPlayerOpen: false,
+      modalMetricInfoOpen: false,
       activePlayer: {},
       activePlayerDetails: [],
       tournaments: 5,
@@ -22,9 +25,14 @@ class App extends React.Component {
   }
   handlePlayerClick(activePlayer, activePlayerDetails) {
     this.setState({
-      modalOpen: !this.state.modalOpen,
+      modalPlayerOpen: !this.state.modalPlayerOpen,
       activePlayer: activePlayer,
       activePlayerDetails: activePlayerDetails,
+    });
+  }
+  handleMetricInfoClick() {
+    this.setState({
+      modalMetricInfoOpen: !this.state.modalMetricInfoOpen,
     });
   }
   handleTournamentsChange(tournaments) {
@@ -45,13 +53,14 @@ class App extends React.Component {
       <React.Fragment>
         <Navbar />
         <Body
-          handlePlayerClick={this.handlePlayerClick}
-          handleTournamentsChange={this.handleTournamentsChange}
           tournaments={this.state.tournaments}
+          handlePlayerClick={this.handlePlayerClick}
+          handleMetricInfoClick={this.handleMetricInfoClick}
+          handleTournamentsChange={this.handleTournamentsChange}
         />
         <Modal
           centered
-          show={this.state.modalOpen}
+          show={this.state.modalPlayerOpen}
           onHide={this.handlePlayerClick}
         >
           <Modal.Header>
@@ -68,6 +77,16 @@ class App extends React.Component {
             <ModalPlayerBody
               activePlayerDetails={activePlayerDetails}
               tournaments={this.state.tournaments}
+            />
+          </Modal.Body>
+        </Modal>
+        <Modal
+          show={this.state.modalMetricInfoOpen}
+          onHide={this.handleMetricInfoClick}
+        >
+          <Modal.Body>
+            <ModalMetricInfoBody
+              handleMetricInfoClick={this.handleMetricInfoClick}
             />
           </Modal.Body>
         </Modal>

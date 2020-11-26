@@ -10,11 +10,23 @@ class List extends Component {
   handlePlayerClick(activePlayer, activePlayerDetails) {
     this.props.handlePlayerClick(activePlayer, activePlayerDetails);
   }
+  handleMetricInfoClick() {
+    this.props.handleMetricInfoClick();
+  }
 
   render() {
     const players = this.props.players === undefined ? [] : this.props.players;
     return (
       <>
+        <div className="container-fluid mb-1">
+          <div
+            style={{ cursor: "pointer" }}
+            onClick={() => this.handleMetricInfoClick()}
+          >
+            <Icon icon={"info"} />{" "}
+            <small className="mr-1">Metric Information</small>
+          </div>
+        </div>
         <ul className="list-group list-group-flush">
           <li
             className="list-group-item sticky-top shadow-sm bg-light"
@@ -64,7 +76,7 @@ class List extends Component {
                 onClick={() => this.handleSortByChange("Rsquared")}
                 style={{
                   borderBottomStyle:
-                    this.props.sortBy === "Slope" ? "solid" : "none",
+                    this.props.sortBy === "Rsquared" ? "solid" : "none",
                   borderBottomColor: "#F9AA33",
                   borderBottomWidth: "1.5px",
                 }}
